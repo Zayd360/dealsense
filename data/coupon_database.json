@@ -1,0 +1,3047 @@
+{
+  "_meta": {
+    "version": "2.0",
+    "description": "AI Coupon Finder â€” Extended Coupon Database",
+    "total_stores": 120,
+    "format": "slug -> [{title, code, discount_value, discount_type, category}]",
+    "discount_types": [
+      "Percentage",
+      "Flat Amount",
+      "Buy1Get1",
+      "Free Shipping",
+      "Cashback"
+    ]
+  },
+  "amazon": [
+    {
+      "title": "10% off Electronics Sitewide",
+      "code": "ELECTRO10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "₹20 off orders ₹100+",
+      "code": "AMAZON20",
+      "discount_value": 20,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "15% off Books & Kindle",
+      "code": "BOOKS15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Books"
+    },
+    {
+      "title": "Free Prime Shipping on First Order",
+      "code": "PRIMESHIP",
+      "discount_value": 9,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "5% Cashback with Amazon Pay",
+      "code": "AMZPAY5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "30% off Fashion & Clothing",
+      "code": "AMZFASH30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹50 off Smart TVs ₹400+",
+      "code": "TVDEAL50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "20% off Grocery & Household",
+      "code": "AMZGROC20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    }
+  ],
+  "nike": [
+    {
+      "title": "20% off for Students (UNiDAYS)",
+      "code": "STUDENT20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "25% off Select Running Shoes",
+      "code": "RUN25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "₹30 off ₹150+ Purchase",
+      "code": "NIKE30",
+      "discount_value": 30,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 15% off Sale Items",
+      "code": "NIKESALE15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Buy 1 Get 1 50% off Socks",
+      "code": "SOCKS50",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Standard Shipping Sitewide",
+      "code": "NIKESHIP",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "10% off First Order (App Only)",
+      "code": "NIKEAPP10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "General"
+    }
+  ],
+  "adidas": [
+    {
+      "title": "30% off Entire Purchase",
+      "code": "ADI30OFF",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 15% off Sale â€” Members Only",
+      "code": "ADIMEM15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹40 off ₹150+ Order",
+      "code": "ADI40",
+      "discount_value": 40,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "20% off for Students",
+      "code": "ADISTUDENT",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Returns + Free Shipping ₹100+",
+      "code": "ADISHIP",
+      "discount_value": 10,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Buy 2 Get 30% off Accessories",
+      "code": "ADIACC30",
+      "discount_value": 30,
+      "discount_type": "Buy1Get1",
+      "category": "Fashion"
+    }
+  ],
+  "walmart": [
+    {
+      "title": "₹10 off Grocery Orders ₹50+",
+      "code": "WMGROC10",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "Grocery"
+    },
+    {
+      "title": "20% off Electronics",
+      "code": "WMELEC20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Pickup on ₹35+ Orders",
+      "code": "WMFREE35",
+      "discount_value": 6,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Home & Kitchen",
+      "code": "WMHOME15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "5% cashback on Walmart+ orders",
+      "code": "WMPLUS5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "₹25 off ₹100 Toy Purchase",
+      "code": "WMTOY25",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Toys & Games"
+    },
+    {
+      "title": "10% off Auto & Tires",
+      "code": "WMAUTO10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Automotive"
+    }
+  ],
+  "target": [
+    {
+      "title": "20% off Clothing & Accessories",
+      "code": "TGTSTYLE20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹25 off ₹100 Home Purchase",
+      "code": "TGTHOME25",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "15% off Electronics",
+      "code": "TGTTECH15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% off with RedCard",
+      "code": "REDCARD10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "25% off Baby & Kids",
+      "code": "TGTBABY25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Baby"
+    },
+    {
+      "title": "Free Same Day Delivery ₹35+",
+      "code": "TGTDAY",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Buy 2 Get 1 Free Toys",
+      "code": "TGTTOYS",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Toys & Games"
+    }
+  ],
+  "best-buy": [
+    {
+      "title": "₹50 off Laptops ₹500+",
+      "code": "BB50LAP",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% off Major Appliances",
+      "code": "BBAPPL10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "15% off Headphones & Audio",
+      "code": "BBAUDIO15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Shipping on All Orders",
+      "code": "BBSHIP",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "₹100 off OLED TVs ₹800+",
+      "code": "BBOLED100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "20% off Gaming Accessories",
+      "code": "BBGAME20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "5% cashback on all purchases (My Best Buy)",
+      "code": "BBCB5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "ebay": [
+    {
+      "title": "15% off for New Users",
+      "code": "EBNEW15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "10% off Electronics",
+      "code": "EBTECH10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "₹10 off ₹50+ Purchase",
+      "code": "EB10OFF",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "Extra 20% off Refurbished Items",
+      "code": "EBREFURB20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Shipping on Selected Items",
+      "code": "EBFSHIP",
+      "discount_value": 6,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "5% off Automotive Parts",
+      "code": "EBAUTO5",
+      "discount_value": 5,
+      "discount_type": "Percentage",
+      "category": "Automotive"
+    }
+  ],
+  "apple": [
+    {
+      "title": "₹100 off MacBook Air with Student Offer",
+      "code": "APPLEEDU",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free AirPods with Mac Purchase",
+      "code": "AIRPODSFREE",
+      "discount_value": 150,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "3 Months Free Apple TV+",
+      "code": "APPLETV3",
+      "discount_value": 30,
+      "discount_type": "Cashback",
+      "category": "Entertainment"
+    },
+    {
+      "title": "6 Months Free Apple Music (Students)",
+      "code": "MUSIC6M",
+      "discount_value": 30,
+      "discount_type": "Cashback",
+      "category": "Entertainment"
+    },
+    {
+      "title": "₹50 off Apple Watch SE",
+      "code": "WATCHSE50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Engraving on iPads & Pencils",
+      "code": "APPENGRV",
+      "discount_value": 20,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    }
+  ],
+  "samsung": [
+    {
+      "title": "10% off Galaxy Phones",
+      "code": "GALAXY10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "₹200 off Galaxy S Series",
+      "code": "GALAXYS200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off TVs & Monitors",
+      "code": "SAMTV15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Trade-In + Up to ₹400 off Fold Series",
+      "code": "FOLD400",
+      "discount_value": 400,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "25% off Accessories Bundle",
+      "code": "SAMACC25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Storage Upgrade on Galaxy Tab",
+      "code": "SAMTAB128",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    }
+  ],
+  "sephora": [
+    {
+      "title": "20% off Full Price Items",
+      "code": "SEP20OFF",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Free Gift with ₹50+ Purchase",
+      "code": "SEPGIFT50",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "₹15 off ₹75 Skincare Order",
+      "code": "SKIN15SEP",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "15% off for New Members",
+      "code": "SEPNEW15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "4x Bonus Points on Fragrance",
+      "code": "SEP4XPTS",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Free Shipping ₹25+ (Insider)",
+      "code": "SEPSHIP25",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Buy 2 Lippies Get 1 Free",
+      "code": "SEPLIP3",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Health & Beauty"
+    }
+  ],
+  "booking-com": [
+    {
+      "title": "15% off Selected Hotels",
+      "code": "BOOK15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "10% Genius Level Discount",
+      "code": "GENIUS10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "Early Bird 20% off (3+ months ahead)",
+      "code": "EARLYBIRD20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "₹30 off ₹150+ Hotel Stay",
+      "code": "BKNG30OFF",
+      "discount_value": 30,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "Free Breakfast at Partner Hotels",
+      "code": "BKNGFREE",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "25% off Last-Minute Deals",
+      "code": "LASTMIN25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    }
+  ],
+  "airbnb": [
+    {
+      "title": "₹50 off First Stay ₹100+",
+      "code": "AIRNEW50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "15% off Long-Term Stays (28+ Nights)",
+      "code": "AIRLONG15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "5% off with Early Booking",
+      "code": "AIRBOOK5",
+      "discount_value": 5,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "₹25 Referral Credit",
+      "code": "AIRREF25",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "10% off Experience Bookings",
+      "code": "AIREXP10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    }
+  ],
+  "expedia": [
+    {
+      "title": "₹100 off Hotel Bookings ₹500+",
+      "code": "EXPHTL100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "10% off Flight + Hotel Packages",
+      "code": "EXPPKG10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "15% off Car Rentals",
+      "code": "EXPCAR15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "₹200 off Vacation Packages ₹1000+",
+      "code": "EXPVAC200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "Extra 20% off Last Minute Flights",
+      "code": "EXPFLY20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "5% cashback on Hotels (Member Prices)",
+      "code": "EXPMEM5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "Travel"
+    }
+  ],
+  "etsy": [
+    {
+      "title": "10% off First Order",
+      "code": "ETSY10NEW",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "Free Shipping on ₹35+",
+      "code": "ETSYSHIP35",
+      "discount_value": 6,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Handmade Jewelry",
+      "code": "ETSYJEM15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "20% off Custom Gifts",
+      "code": "ETSYGIFT20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "Buy 3 Print Art Get 1 Free",
+      "code": "ETSYART4",
+      "discount_value": 25,
+      "discount_type": "Buy1Get1",
+      "category": "Entertainment"
+    }
+  ],
+  "wayfair": [
+    {
+      "title": "20% off First Order",
+      "code": "WAYFIRST20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "₹40 off ₹500+ Furniture",
+      "code": "WAYFURN40",
+      "discount_value": 40,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "10% off Bedding & Bath",
+      "code": "WAYBED10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Free Shipping on All Orders ₹35+",
+      "code": "WAYSHIP",
+      "discount_value": 9,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Outdoor Furniture",
+      "code": "WAYOUT15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Up to 70% off Clearance",
+      "code": "WAYCLEAR70",
+      "discount_value": 70,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    }
+  ],
+  "ikea": [
+    {
+      "title": "10% off Kitchen Appliances",
+      "code": "IKEAKITC10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Free Delivery on Orders ₹500+",
+      "code": "IKEADEL500",
+      "discount_value": 15,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off IKEA Family Bedroom",
+      "code": "IKEABED15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "₹50 off ₹300+ Living Room",
+      "code": "IKEALIV50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Buy 2 Get 1 Free Plants",
+      "code": "IKEAPLANT",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "20% off Office Furniture",
+      "code": "IKEAWORK20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Office Supplies"
+    }
+  ],
+  "asos": [
+    {
+      "title": "20% off for Students",
+      "code": "ASOSSTU20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "15% off New Arrivals",
+      "code": "ASOSNEW15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹25 off ₹100+ Purchase",
+      "code": "ASOS25OD",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Express Delivery ₹75+",
+      "code": "ASOSEXP75",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "25% off Sale + Extra 10%",
+      "code": "ASOSEXT10",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Buy 3 Get 20% off ASOS Design",
+      "code": "ASOS3FOR",
+      "discount_value": 20,
+      "discount_type": "Buy1Get1",
+      "category": "Fashion"
+    }
+  ],
+  "shein": [
+    {
+      "title": "15% off First Order",
+      "code": "SHEIN15F",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹5 off Orders ₹29+",
+      "code": "SHEIN5OFF",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 20% off Sale Items",
+      "code": "SHEINS20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping on ₹49+",
+      "code": "SHEINSHIP",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "25% off Women's Summer Collection",
+      "code": "SHEINSUM25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Buy 4 Get 1 Free Accessories",
+      "code": "SHEINACC5",
+      "discount_value": 20,
+      "discount_type": "Buy1Get1",
+      "category": "Fashion"
+    }
+  ],
+  "chewy": [
+    {
+      "title": "30% off First Autoship Order",
+      "code": "CHEWAUTO30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Pets"
+    },
+    {
+      "title": "₹20 off ₹49+ for New Customers",
+      "code": "CHEWNEW20",
+      "discount_value": 20,
+      "discount_type": "Flat Amount",
+      "category": "Pets"
+    },
+    {
+      "title": "Free Shipping on ₹49+",
+      "code": "CHEWSHIP49",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Royal Canin & Hills",
+      "code": "CHEWFOOD15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Pets"
+    },
+    {
+      "title": "10% off Prescription Meds",
+      "code": "CHEWRX10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    }
+  ],
+  "flipkart": [
+    {
+      "title": "10% off via SBI Credit Card",
+      "code": "FKSBI10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "20% off Electronics",
+      "code": "FKELEC20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off Fashion & Clothing",
+      "code": "FKFASH15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Delivery First Order",
+      "code": "FKDEL1",
+      "discount_value": 40,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Rs.500 off Mobiles Rs.10000+",
+      "code": "FKMOB500",
+      "discount_value": 500,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "25% off Home & Furniture",
+      "code": "FKHOME25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "5% extra via Axis Bank Card",
+      "code": "FKAXIS5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Buy 2 Get 1 Free Books",
+      "code": "FKBOOK3",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Books"
+    }
+  ],
+  "myntra": [
+    {
+      "title": "30% off All Brands",
+      "code": "MTRA30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 20% off Fashion Sale",
+      "code": "MFASH20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "15% Cashback via Paytm",
+      "code": "MPAYTM15",
+      "discount_value": 15,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Rs.300 off Rs.1499+",
+      "code": "MTRA300",
+      "discount_value": 300,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "40% off Sports & Activewear",
+      "code": "MSPORT40",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Delivery on All Orders",
+      "code": "MFREE",
+      "discount_value": 50,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Extra 10% with HDFC Card",
+      "code": "MHDFC10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "swiggy": [
+    {
+      "title": "50% off up to Rs.100 (Min Rs.199)",
+      "code": "SWIGGY50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Rs.150 off on Rs.299+",
+      "code": "SWIG150",
+      "discount_value": 150,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Delivery First 3 Orders",
+      "code": "SFREE3",
+      "discount_value": 30,
+      "discount_type": "Free Shipping",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "60% off up to Rs.120 (New Users)",
+      "code": "SNEW60",
+      "discount_value": 60,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Rs.75 off Instamart (Grocery)",
+      "code": "SINSTA75",
+      "discount_value": 75,
+      "discount_type": "Flat Amount",
+      "category": "Grocery"
+    },
+    {
+      "title": "20% Cashback via Swiggy Money",
+      "code": "SMONEY20",
+      "discount_value": 20,
+      "discount_type": "Cashback",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Weekend Special 30% off",
+      "code": "SWEEKEND30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    }
+  ],
+  "zomato": [
+    {
+      "title": "60% off up to Rs.120 (1st Order)",
+      "code": "ZOM60NEW",
+      "discount_value": 60,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Rs.200 off on Rs.500+",
+      "code": "ZOFF200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Gold Trial (1 Month)",
+      "code": "ZGOLD1M",
+      "discount_value": 100,
+      "discount_type": "Cashback",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "40% off on Partner Restaurants",
+      "code": "ZPREMIUM40",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Rs.100 off Zomato Market",
+      "code": "ZMARKET100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Grocery"
+    },
+    {
+      "title": "15% Cashback via Paytm",
+      "code": "ZPAYTM15",
+      "discount_value": 15,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Buy 1 Get 1 Free at Select Outlets",
+      "code": "ZBOGO",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    }
+  ],
+  "nykaa": [
+    {
+      "title": "20% off Beauty Products",
+      "code": "NYK20OFF",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "15% off Skincare Range",
+      "code": "NYKSKIN15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Buy 2 Get 1 Free (Cosmetics)",
+      "code": "NYKB2G1",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Rs.200 off Rs.1000+ (New User)",
+      "code": "NYKNEW200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "10% Cashback via PhonePe",
+      "code": "NYKPE10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Free Delivery on All Orders",
+      "code": "NYKFREE",
+      "discount_value": 50,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "25% off Hair Care Products",
+      "code": "NYKHAIR25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    }
+  ],
+  "aliexpress": [
+    {
+      "title": "₹8 off ₹10+ First App Order",
+      "code": "AENEW8",
+      "discount_value": 8,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "15% off Electronics",
+      "code": "AEELEC15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Shipping on ₹5+ Select Items",
+      "code": "AESHIP5",
+      "discount_value": 6,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Extra 10% off Choice Items",
+      "code": "AECHOICE10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "₹20 off ₹100+ Clothing",
+      "code": "AECLOTH20",
+      "discount_value": 20,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    }
+  ],
+  "gap": [
+    {
+      "title": "40% off Full Price Styles",
+      "code": "GAP40",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "60% off Sale + Extra 10%",
+      "code": "GAPSALE60",
+      "discount_value": 60,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹35 off ₹100+ Purchase",
+      "code": "GAP35OFF",
+      "discount_value": 35,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping on ₹50+ Orders",
+      "code": "GAPSHIP50",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "30% off Kids Collection",
+      "code": "GAPKID30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    }
+  ],
+  "old-navy": [
+    {
+      "title": "50% off Almost Everything",
+      "code": "ONHALF",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹15 off ₹75+ Purchase",
+      "code": "ON15OFF",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "25% off Activewear",
+      "code": "ONACTIVE25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Shipping on ₹50+ Orders",
+      "code": "ONSHIP50",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "uber-eats": [
+    {
+      "title": "50% off First 2 Orders (New Users)",
+      "code": "EATS50NEW",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "₹10 off ₹25+ McDonald's Order",
+      "code": "MCDTS10",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Delivery on First 3 Orders",
+      "code": "EATSFREE3",
+      "discount_value": 5,
+      "discount_type": "Free Shipping",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "20% off Subway This Weekend",
+      "code": "SUBWAYEND20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "15% Cashback via Uber Cash",
+      "code": "UCASH15",
+      "discount_value": 15,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Buy 1 Burger Get 1 Free",
+      "code": "EATSBOGO",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    }
+  ],
+  "instacart": [
+    {
+      "title": "Free Delivery on First 3 Orders",
+      "code": "ICFREE3",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "Grocery"
+    },
+    {
+      "title": "15% off Organic Produce",
+      "code": "ICORG15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    },
+    {
+      "title": "₹10 off ₹35+ Grocery Order",
+      "code": "ICGROC10",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "Grocery"
+    },
+    {
+      "title": "5% Cashback on Instacart+ Orders",
+      "code": "ICPLUSC5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "dominos": [
+    {
+      "title": "50% off Regular Price Pizzas",
+      "code": "DOM50PIZ",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Buy 1 Get 1 Free Medium Pizza",
+      "code": "DOMBOGO",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "₹5 off ₹25+ Online Order",
+      "code": "DOM5OFF",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Cheesy Bread with Large Order",
+      "code": "DOMCHEESY",
+      "discount_value": 6,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "20% off Weekday Orders",
+      "code": "DOMWKDAY20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    }
+  ],
+  "pizza-hut": [
+    {
+      "title": "50% off All Menu Price Pizzas",
+      "code": "PHALF50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "₹10 off ₹30+ Order",
+      "code": "PH10OFF",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Breadsticks with Any Large Pizza",
+      "code": "PHBREAD",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Buy 1 Large Get 1 Medium Free",
+      "code": "PHBOGO",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    }
+  ],
+  "zara": [
+    {
+      "title": "20% off Sale Items",
+      "code": "ZARASALE20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Returns on All Orders",
+      "code": "ZARAFREE",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off New Collection",
+      "code": "ZARANEW15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹30 off ₹150+ Purchase",
+      "code": "ZARA30",
+      "discount_value": 30,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    }
+  ],
+  "h-m": [
+    {
+      "title": "20% off First Online Order",
+      "code": "HMFIRST20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "10% off with H&M Club Member",
+      "code": "HMCLUB10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "30% off Home Collection",
+      "code": "HMHOME30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Free Shipping on ₹40+ Orders",
+      "code": "HMSHIP40",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "25% off Kids Clothes",
+      "code": "HMKIDS25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    }
+  ],
+  "netflix": [
+    {
+      "title": "1 Month Free Netflix Standard",
+      "code": "NFLX1M",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Entertainment"
+    },
+    {
+      "title": "30 Days Free Trial (New Users)",
+      "code": "NFLXTRIAL",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Entertainment"
+    },
+    {
+      "title": "Student Plan 20% Discount",
+      "code": "NFLXSTU20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    }
+  ],
+  "spotify": [
+    {
+      "title": "3 Months Premium for ₹0.99",
+      "code": "SPOT3M",
+      "discount_value": 90,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "Students Get 50% off Premium",
+      "code": "SPOTSTU50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "Free Trial 1 Month Premium",
+      "code": "SPOTFREE",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "Entertainment"
+    },
+    {
+      "title": "Family Plan 6 Accounts 1 Price",
+      "code": "SPOTFAM",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    }
+  ],
+  "steam": [
+    {
+      "title": "Up to 90% off Indie Games",
+      "code": "STEAMIND90",
+      "discount_value": 90,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "75% off Weekend Deals",
+      "code": "STEAMWKND75",
+      "discount_value": 75,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "50% off AAA Titles",
+      "code": "STEAMAAA50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "Free-to-Play DLC Bundle",
+      "code": "STEAMF2P",
+      "discount_value": 20,
+      "discount_type": "Flat Amount",
+      "category": "Entertainment"
+    }
+  ],
+  "uber": [
+    {
+      "title": "50% off First 3 Rides",
+      "code": "UBERFIRST50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "₹5 off Next Ride",
+      "code": "UBER5",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "15% off Uber Black",
+      "code": "UBLACK15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "10% Cashback via Paytm",
+      "code": "UBERPAYTM10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "Travel"
+    }
+  ],
+  "ola": [
+    {
+      "title": "50% off First Ride (New Users)",
+      "code": "OLANEW50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "Rs.100 off Outstation Trips",
+      "code": "OLAOUT100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "20% off Ola Electric Rides",
+      "code": "OLAEV20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "Free Ride with OlaMoney Postpaid",
+      "code": "OLAPOST",
+      "discount_value": 100,
+      "discount_type": "Cashback",
+      "category": "Travel"
+    }
+  ],
+  "paytm": [
+    {
+      "title": "10% Cashback on Mobile Recharge",
+      "code": "PTMRCH10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "5% Cashback Sitewide (Max Rs.50)",
+      "code": "PTMCB5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Rs.100 off First Movie Ticket",
+      "code": "PTMMOV100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Entertainment"
+    },
+    {
+      "title": "15% off DTH Recharge",
+      "code": "PTMDTH15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "Free Bus Ticket Booking (First)",
+      "code": "PTMBUS",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    }
+  ],
+  "meesho": [
+    {
+      "title": "25% off First Order",
+      "code": "MEESHOF25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Delivery on All Orders",
+      "code": "MEESHOFREE",
+      "discount_value": 40,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Extra 10% off via UPI Payment",
+      "code": "MEESHOUPI10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Rs.150 off Rs.599+ (Home Decor)",
+      "code": "MEESHOHM150",
+      "discount_value": 150,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    }
+  ],
+  "blinkit": [
+    {
+      "title": "Rs.100 off First Grocery Order",
+      "code": "BLNEW100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Grocery"
+    },
+    {
+      "title": "Free 10-Min Delivery First Order",
+      "code": "BLFIRST",
+      "discount_value": 30,
+      "discount_type": "Free Shipping",
+      "category": "Grocery"
+    },
+    {
+      "title": "20% off Fresh Vegetables",
+      "code": "BLFRESH20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    },
+    {
+      "title": "15% Cashback via GPay",
+      "code": "BLGPAY15",
+      "discount_value": 15,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "bigbasket": [
+    {
+      "title": "Rs.200 off Rs.1200+ First Order",
+      "code": "BBNEW200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Grocery"
+    },
+    {
+      "title": "20% off Organic Products",
+      "code": "BBORG20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    },
+    {
+      "title": "10% off via SBI Bank",
+      "code": "BBSBI10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Free Delivery on Big Day Orders",
+      "code": "BBFREE",
+      "discount_value": 50,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Baby & Toddler Foods",
+      "code": "BBBABY15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Baby"
+    }
+  ],
+  "lenskart": [
+    {
+      "title": "Buy 1 Get 1 Free Eyeglasses",
+      "code": "LKBOGO",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Rs.500 off on First Order",
+      "code": "LKNEW500",
+      "discount_value": 500,
+      "discount_type": "Flat Amount",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "20% off Sunglasses",
+      "code": "LKSUN20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Free Home Eye Check-Up",
+      "code": "LKFREE",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Health & Beauty"
+    }
+  ],
+  "ajio": [
+    {
+      "title": "30% off Branded Clothing",
+      "code": "AJIO30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Rs.250 off Rs.999+ Purchase",
+      "code": "AJIO250",
+      "discount_value": 250,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 20% off AJIO Exclusives",
+      "code": "AJIOEX20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping on All Orders",
+      "code": "AJIOFREE",
+      "discount_value": 50,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% Cashback via OneCard",
+      "code": "AJIOONE15",
+      "discount_value": 15,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "amazon-in": [
+    {
+      "title": "10% off via HDFC Card",
+      "code": "AMZHDFC10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "Rs.300 off on Electronics Rs.3000+",
+      "code": "AMZELE300",
+      "discount_value": 300,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "20% off Fashion",
+      "code": "AMZFASH20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping with Prime",
+      "code": "AMZPRIMESHIP",
+      "discount_value": 50,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Books",
+      "code": "AMZBOOKS15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Books"
+    }
+  ],
+  "temu": [
+    {
+      "title": "Up to 90% off First Order",
+      "code": "TEMU90",
+      "discount_value": 90,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "Free Shipping First Order",
+      "code": "TEMUFREE",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "₹10 off ₹30+ Purchase",
+      "code": "TEMU10",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "Extra 20% off App Orders",
+      "code": "TEMUAPP20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "General"
+    }
+  ],
+  "wish": [
+    {
+      "title": "₹5 off First App Purchase",
+      "code": "WISH5NEW",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "80% off Trending Items",
+      "code": "WISH80",
+      "discount_value": 80,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "Free Shipping on ₹5+ Orders",
+      "code": "WISHSHIP5",
+      "discount_value": 6,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "snapdeal": [
+    {
+      "title": "30% off Fashion Brands",
+      "code": "SNPFASH30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Rs.200 off Rs.799+ Purchase",
+      "code": "SNP200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "Free Delivery on All Orders",
+      "code": "SNPFREE",
+      "discount_value": 40,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Extra 10% via Mobikwik",
+      "code": "SNPMWK10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "croma": [
+    {
+      "title": "10% off on Laptops",
+      "code": "CROLAP10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Rs.2000 off Air Conditioners",
+      "code": "CROAC2K",
+      "discount_value": 2000,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "15% off Mobile Phones",
+      "code": "CROMOB15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Home Installation with TV",
+      "code": "CROTV",
+      "discount_value": 500,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% Cashback on ICICI Cards",
+      "code": "ICICICROMA10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "makemytrip": [
+    {
+      "title": "Rs.2000 off on International Flights",
+      "code": "MMTINT2K",
+      "discount_value": 2000,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "25% off Hotel Bookings",
+      "code": "MMTHTL25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "15% off Domestic Flights",
+      "code": "MMTDOM15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "Rs.500 off Holiday Packages",
+      "code": "MMTPKG500",
+      "discount_value": 500,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "10% Cashback via ICICI Card",
+      "code": "MMTICICI10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "Travel"
+    }
+  ],
+  "ixigo": [
+    {
+      "title": "10% off Train Ticket Bookings",
+      "code": "IXITRAIN10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "Rs.300 off Flight Bookings",
+      "code": "IXIFLY300",
+      "discount_value": 300,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "20% off Bus Ticket Bookings",
+      "code": "IXIBUS20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "5% Cashback on All Bookings",
+      "code": "IXICB5",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "Travel"
+    }
+  ],
+  "mmt": [
+    {
+      "title": "Rs.1500 off Domestic Flight",
+      "code": "MMT1500",
+      "discount_value": 1500,
+      "discount_type": "Flat Amount",
+      "category": "Travel"
+    },
+    {
+      "title": "30% off Hotel Stay (Weekend)",
+      "code": "MMDWKND30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    }
+  ],
+  "puma": [
+    {
+      "title": "30% off Footwear",
+      "code": "PUMAFOOT30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "20% off Activewear",
+      "code": "PUMAACT20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "₹25 off ₹100+ Order",
+      "code": "PUMA25",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Shipping on ₹50+",
+      "code": "PUMASHIP",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Extra 15% off Sale (Members)",
+      "code": "PUMAMEM15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    }
+  ],
+  "reebok": [
+    {
+      "title": "30% off Sitewide",
+      "code": "RBK30OFF",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Extra 20% off Sale",
+      "code": "RBKSALE20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Shipping on ₹60+",
+      "code": "RBKSHIP60",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "₹15 off ₹75+ Purchase",
+      "code": "RBK15OFF",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Sports"
+    }
+  ],
+  "under-armour": [
+    {
+      "title": "25% off Sitewide",
+      "code": "UA25OFF",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "20% off for Students",
+      "code": "UASTU20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Shipping on ₹50+",
+      "code": "UASHIP50",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "Extra 30% off Outlet Items",
+      "code": "UAOUT30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    }
+  ],
+  "lululemon": [
+    {
+      "title": "25% off 'We Made Too Much' Sale",
+      "code": "LULUWMTM25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "₹50 off ₹200+ Order",
+      "code": "LULU50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Sports"
+    },
+    {
+      "title": "20% off for Healthcare Workers",
+      "code": "LULUCARE20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Hemming on Pants",
+      "code": "LULUHEM",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Sports"
+    }
+  ],
+  "overstock": [
+    {
+      "title": "15% off Your First Order",
+      "code": "OSTOCK15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "₹40 off ₹400+ Furniture",
+      "code": "OSFURN40",
+      "discount_value": 40,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Extra 10% off Clearance",
+      "code": "OSCLEAR10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Free Shipping on ₹45+",
+      "code": "OSSHIP45",
+      "discount_value": 9,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "groupon": [
+    {
+      "title": "20% off Select Local Deals",
+      "code": "GRPN20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "₹5 off ₹25+ Activity Purchase",
+      "code": "GRPN5OFF",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "Entertainment"
+    },
+    {
+      "title": "15% off Travel Deals",
+      "code": "GRPNTRV15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Travel"
+    },
+    {
+      "title": "10% off Health & Beauty",
+      "code": "GRPNHB10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "First Deal 30% off (New Users)",
+      "code": "GRPNNEW30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "General"
+    }
+  ],
+  "rakuten": [
+    {
+      "title": "10% Cashback at 3500+ Stores",
+      "code": "RAKUCB10",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "₹30 Welcome Bonus for New Members",
+      "code": "RAKU30WB",
+      "discount_value": 30,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "Double Cashback Weekends",
+      "code": "RAKUDCB",
+      "discount_value": 15,
+      "discount_type": "Cashback",
+      "category": "General"
+    }
+  ],
+  "shopback": [
+    {
+      "title": "8% Cashback on Fashion Orders",
+      "code": "SB8FASH",
+      "discount_value": 8,
+      "discount_type": "Cashback",
+      "category": "Fashion"
+    },
+    {
+      "title": "10% Cashback on Electronics",
+      "code": "SB10ELEC",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "Electronics"
+    },
+    {
+      "title": "5% Cashback on Travel",
+      "code": "SB5TRV",
+      "discount_value": 5,
+      "discount_type": "Cashback",
+      "category": "Travel"
+    },
+    {
+      "title": "₹20 Signup Bonus",
+      "code": "SBSIGN20",
+      "discount_value": 20,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    }
+  ],
+  "costco": [
+    {
+      "title": "₹25 off ₹250+ Online Order",
+      "code": "COST25OFF",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "10% off Electronics Members",
+      "code": "COSTELEC10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off Home Appliances",
+      "code": "COSTAPPL15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Free 2-Day Shipping (Member)",
+      "code": "COST2DAY",
+      "discount_value": 15,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "macys": [
+    {
+      "title": "20% off Full Price Items",
+      "code": "MACYS20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹25 off ₹75+ Clothing",
+      "code": "MACYS25",
+      "discount_value": 25,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 30% off Sale",
+      "code": "MACYSSL30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping on ₹25+",
+      "code": "MACYSSHIP",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "15% off Beauty Products",
+      "code": "MACYSBEAUY15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    }
+  ],
+  "nordstrom": [
+    {
+      "title": "25% off Clearance",
+      "code": "NCLEAR25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping Any Order",
+      "code": "NDFRESH",
+      "discount_value": 9,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    },
+    {
+      "title": "₹50 off ₹200+ Designer",
+      "code": "NORD50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Fashion"
+    },
+    {
+      "title": "20% off for Cardmembers",
+      "code": "NDCARD20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    }
+  ],
+  "kohls": [
+    {
+      "title": "30% off Sitewide",
+      "code": "KOHL30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "₹10 Kohl's Cash for every ₹50 Spent",
+      "code": "KOHLCASH",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "General"
+    },
+    {
+      "title": "40% off Active Wear",
+      "code": "KOHLACT40",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "Free Shipping on ₹25+ Orders",
+      "code": "KOHLSHIP25",
+      "discount_value": 7,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "anthropologie": [
+    {
+      "title": "15% off First Order",
+      "code": "ANTHRO15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Extra 40% off Sale",
+      "code": "ANTHROSALE40",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping on ₹50+",
+      "code": "ANTHROPSHIP",
+      "discount_value": 8,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "skechers": [
+    {
+      "title": "30% off Sitewide",
+      "code": "SKEC30OFF",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Fashion"
+    },
+    {
+      "title": "Buy 2 Pairs Get 1 50% off",
+      "code": "SKECBOG",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Fashion"
+    },
+    {
+      "title": "Free Shipping on ₹75+",
+      "code": "SKECSHIP75",
+      "discount_value": 9,
+      "discount_type": "Free Shipping",
+      "category": "General"
+    }
+  ],
+  "dell": [
+    {
+      "title": "₹100 off Laptops ₹800+",
+      "code": "DELL100LAP",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off for Students",
+      "code": "DELLSTU15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% off Monitors",
+      "code": "DELLMON10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "3 Years Warranty Upgrade Free",
+      "code": "DELLWARE3",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "20% off Accessories",
+      "code": "DELLACC20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    }
+  ],
+  "hp": [
+    {
+      "title": "₹150 off HP Spectre Laptops",
+      "code": "HPSPEC150",
+      "discount_value": 150,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% off for Students & Teachers",
+      "code": "HPEDU10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "20% off Printers",
+      "code": "HPPRINT20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off Monitors",
+      "code": "HPMON15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    }
+  ],
+  "lenovo": [
+    {
+      "title": "₹200 off ThinkPad Series",
+      "code": "LENVTHINK200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off for Students",
+      "code": "LENVSTU15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% off Accessories Bundle",
+      "code": "LENVACC10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "12% off IdeaPad Gaming Series",
+      "code": "LENVGAME12",
+      "discount_value": 12,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    }
+  ],
+  "sony": [
+    {
+      "title": "15% off PlayStation Consoles",
+      "code": "SONYPS15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "₹50 off Headphones WH-1000XM5",
+      "code": "SONYXM50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "20% off Cameras",
+      "code": "SONYCAM20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "10% off Smart TVs",
+      "code": "SONYTV10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    }
+  ],
+  "lg": [
+    {
+      "title": "₹200 off OLED TVs",
+      "code": "LGOLED200",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "15% off Refrigerators",
+      "code": "LGFRIDGE15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "10% off Washing Machines",
+      "code": "LGWASH10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "Free 5-Year Warranty on Appliances",
+      "code": "LGWARE5",
+      "discount_value": 200,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    }
+  ],
+  "dyson": [
+    {
+      "title": "₹100 off Hair Care Products",
+      "code": "DYSHAIR100",
+      "discount_value": 100,
+      "discount_type": "Flat Amount",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Free Accessory Kit with Vacuum",
+      "code": "DYSVAC",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "20% off Refurbished Products",
+      "code": "DYSREFURB20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Home & Kitchen"
+    },
+    {
+      "title": "₹75 off Air Purifiers",
+      "code": "DYSAIR75",
+      "discount_value": 75,
+      "discount_type": "Flat Amount",
+      "category": "Home & Kitchen"
+    }
+  ],
+  "walgreens": [
+    {
+      "title": "20% off Photo Orders",
+      "code": "WALGPHOTO20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    },
+    {
+      "title": "15% off Beauty Products",
+      "code": "WALGBEAUY15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Buy 1 Get 1 Free Vitamins",
+      "code": "WALGVITBOGO",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "10% off Prescription Pickup",
+      "code": "WALGRX10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    }
+  ],
+  "cvs": [
+    {
+      "title": "25% off CVS Brand Products",
+      "code": "CVSBRAND25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "Buy 2 Get 1 Free Skin Care",
+      "code": "CVSSKIN3",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "₹5 off ₹25+ Purchase",
+      "code": "CVS5OFF",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    },
+    {
+      "title": "20% off Photo Services",
+      "code": "CVSPHOTO20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Entertainment"
+    }
+  ],
+  "whole-foods": [
+    {
+      "title": "10% off for Prime Members",
+      "code": "WFPRIME10",
+      "discount_value": 10,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    },
+    {
+      "title": "20% off Organic Produce",
+      "code": "WFORG20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    },
+    {
+      "title": "Buy 2 Get 1 Free Vitamins",
+      "code": "WFVIT3",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Health & Beauty"
+    },
+    {
+      "title": "15% off Wine & Beer",
+      "code": "WFALC15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    }
+  ],
+  "gopro": [
+    {
+      "title": "30% off Refurbished Cameras",
+      "code": "GPREFURB30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Electronics"
+    },
+    {
+      "title": "₹50 off HERO12 Camera",
+      "code": "GPHERO50",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    },
+    {
+      "title": "Free Mounting Bundle",
+      "code": "GPMOUNT",
+      "discount_value": 30,
+      "discount_type": "Flat Amount",
+      "category": "Electronics"
+    }
+  ],
+  "garmin": [
+    {
+      "title": "₹75 off Fenix 7 Watch",
+      "code": "GARFENIX75",
+      "discount_value": 75,
+      "discount_type": "Flat Amount",
+      "category": "Sports"
+    },
+    {
+      "title": "20% off Bike Computers",
+      "code": "GARBIKE20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    },
+    {
+      "title": "15% off Running GPS Watches",
+      "code": "GARRUN15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Sports"
+    }
+  ],
+  "wholefoods": [
+    {
+      "title": "15% off With Prime Membership",
+      "code": "WFAM15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    },
+    {
+      "title": "Daily Deals â€” Up to 30% off",
+      "code": "WFDAILY30",
+      "discount_value": 30,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    }
+  ],
+  "h-r-block": [
+    {
+      "title": "20% off Tax Filing Service",
+      "code": "HRBFILE20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "General"
+    },
+    {
+      "title": "Free Federal E-File",
+      "code": "HRBEFREE",
+      "discount_value": 50,
+      "discount_type": "Flat Amount",
+      "category": "General"
+    }
+  ],
+  "coursera": [
+    {
+      "title": "50% off Coursera Plus",
+      "code": "CPLUS50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Books"
+    },
+    {
+      "title": "7 Days Free Trial (Any Course)",
+      "code": "CTRIAL7",
+      "discount_value": 50,
+      "discount_type": "Cashback",
+      "category": "Books"
+    },
+    {
+      "title": "Free Course Audit Mode",
+      "code": "CAUDIT",
+      "discount_value": 100,
+      "discount_type": "Percentage",
+      "category": "Books"
+    }
+  ],
+  "udemy": [
+    {
+      "title": "Up to 95% off Any Course",
+      "code": "UDEMY95",
+      "discount_value": 95,
+      "discount_type": "Percentage",
+      "category": "Books"
+    },
+    {
+      "title": "₹9.99 Courses (Limited Time)",
+      "code": "UDEMY999",
+      "discount_value": 90,
+      "discount_type": "Percentage",
+      "category": "Books"
+    },
+    {
+      "title": "Free First Course",
+      "code": "UDEMYFREE",
+      "discount_value": 100,
+      "discount_type": "Percentage",
+      "category": "Books"
+    }
+  ],
+  "skillshare": [
+    {
+      "title": "40% off Annual Membership",
+      "code": "SKILL40Y",
+      "discount_value": 40,
+      "discount_type": "Percentage",
+      "category": "Books"
+    },
+    {
+      "title": "1 Month Free Trial",
+      "code": "SKILLFREE",
+      "discount_value": 32,
+      "discount_type": "Flat Amount",
+      "category": "Books"
+    }
+  ],
+  "grubhub": [
+    {
+      "title": "₹15 off First Order ₹25+",
+      "code": "GRUB15F",
+      "discount_value": 15,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Delivery (Grubhub+)",
+      "code": "GRUBFREE",
+      "discount_value": 5,
+      "discount_type": "Free Shipping",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "25% off Local Restaurants",
+      "code": "GRUBLOCAL25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Buy 1 Get 1 Free Entrees",
+      "code": "GRUBBOG",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    }
+  ],
+  "doordash": [
+    {
+      "title": "₹0 Delivery Fee First 3 Orders",
+      "code": "DDFREE3",
+      "discount_value": 5,
+      "discount_type": "Free Shipping",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "50% off First DashPass Order",
+      "code": "DDPASS50",
+      "discount_value": 50,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "₹10 off ₹20+ McDonald's",
+      "code": "DDMCD10",
+      "discount_value": 10,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "20% off Grocery Delivery",
+      "code": "DDGROC20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Grocery"
+    }
+  ],
+  "starbucks": [
+    {
+      "title": "Buy 1 Get 1 Free (Happy Hour)",
+      "code": "SBUX909",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Birthday Drink",
+      "code": "SBUXBDAY",
+      "discount_value": 6,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Double Stars on Food",
+      "code": "SBUXDBL",
+      "discount_value": 10,
+      "discount_type": "Cashback",
+      "category": "Food & Dining"
+    }
+  ],
+  "mcdonalds": [
+    {
+      "title": "Buy 1 Big Mac Get 1 Free (App)",
+      "code": "MCDBOGBM",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "₹1 Medium Coffee (Any Size)",
+      "code": "MCD1COFFEE",
+      "discount_value": 3,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Fries with ₹1 Purchase (App)",
+      "code": "MCDFRIES",
+      "discount_value": 4,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "20% off via Uber Eats",
+      "code": "MCDUBER20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    }
+  ],
+  "subway": [
+    {
+      "title": "Buy 1 Footlong Get 1 50% off",
+      "code": "SUBFOOT50",
+      "discount_value": 50,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "₹5 off ₹20+ Catering Order",
+      "code": "SUBCATER5",
+      "discount_value": 5,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Cookie with Any Footlong",
+      "code": "SUBCOOKIE",
+      "discount_value": 2,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "15% off App Orders",
+      "code": "SUBAPP15",
+      "discount_value": 15,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    }
+  ],
+  "kfc": [
+    {
+      "title": "20% off Bucket Orders",
+      "code": "KFCBUCKET20",
+      "discount_value": 20,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Free Drink with ₹10+ Meal",
+      "code": "KFCDRINK",
+      "discount_value": 3,
+      "discount_type": "Flat Amount",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "Buy 2 Zinger Burgers Get 1 Free",
+      "code": "KFCZING3",
+      "discount_value": 33,
+      "discount_type": "Buy1Get1",
+      "category": "Food & Dining"
+    },
+    {
+      "title": "25% off via App First Order",
+      "code": "KFCAPP25",
+      "discount_value": 25,
+      "discount_type": "Percentage",
+      "category": "Food & Dining"
+    }
+  ]
+}

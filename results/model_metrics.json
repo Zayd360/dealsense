@@ -1,0 +1,12 @@
+{
+  "Random Forest (tuned)": {
+    "Accuracy": 1.0,
+    "ROC AUC": 1.0,
+    "Avg Precision": 1.0
+  },
+  "XGBoost (tuned)": {
+    "Accuracy": 1.0,
+    "ROC AUC": 1.0,
+    "Avg Precision": 1.0
+  }
+}
