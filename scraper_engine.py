@@ -644,7 +644,7 @@ def scrape_coupondunia(slug: str, display: str) -> list[dict]:
                 flat  = _extract_flat(title)
                 valid = _is_valid_code(raw_code)
                 coupons.append({
-                    "title"         : title[:120],
+                    "title"         : _clean_title(title),
                     "code"          : raw_code.upper() if valid else "",
                     "has_code"      : valid,
                     "discount_value": pct if pct > 0 else flat,
@@ -692,7 +692,7 @@ def scrape_grabon(slug: str, display: str) -> list[dict]:
             flat  = _extract_flat(title)
             valid = _is_valid_code(raw_code)
             coupons.append({
-                "title"         : title[:120],
+                "title"         : _clean_title(title),
                 "code"          : raw_code.upper() if valid else "",
                 "has_code"      : valid,
                 "discount_value": pct if pct > 0 else flat,
@@ -739,7 +739,7 @@ def scrape_cashkaro(slug: str, display: str) -> list[dict]:
             flat  = _extract_flat(title)
             valid = _is_valid_code(raw_code)
             coupons.append({
-                "title"         : title[:120],
+                "title"         : _clean_title(title),
                 "code"          : raw_code.upper() if valid else "",
                 "has_code"      : valid,
                 "discount_value": pct if pct > 0 else flat,
@@ -780,7 +780,7 @@ def scrape_desidime(display: str) -> list[dict]:
                 src_url = (f"https://www.desidime.com{href}"
                            if href.startswith("/") else href)
                 coupons.append({
-                    "title"         : title[:120],
+                    "title"         : _clean_title(title),
                     "code"          : "",
                     "has_code"      : False,
                     "discount_value": pct if pct > 0 else flat,
@@ -810,7 +810,7 @@ def scrape_desidime(display: str) -> list[dict]:
             raw_code = _extract_code(title + " " + desc)
             valid    = _is_valid_code(raw_code)
             coupons.append({
-                "title"         : title[:120],
+                "title"         : _clean_title(title),
                 "code"          : raw_code.upper() if valid else "",
                 "has_code"      : valid,
                 "discount_value": pct if pct > 0 else flat,
@@ -904,7 +904,7 @@ def scrape_couponfollow(slug: str, display: str) -> list[dict]:
                 pct   = _extract_pct(title)
                 flat  = _extract_flat(title)
                 coupons.append({
-                    "title"         : title[:120],
+                    "title"         : _clean_title(title),
                     "code"          : raw_code.upper() if valid else "",
                     "has_code"      : valid,
                     "discount_value": pct if pct > 0 else flat,
@@ -956,7 +956,7 @@ def scrape_promocodes_in(slug: str, display: str) -> list[dict]:
             pct   = _extract_pct(title)
             flat  = _extract_flat(title)
             coupons.append({
-                "title"         : title[:120],
+                "title"         : _clean_title(title),
                 "code"          : raw_code.upper() if valid else "",
                 "has_code"      : valid,
                 "discount_value": pct if pct > 0 else flat,
@@ -1007,7 +1007,7 @@ def scrape_timesvoucher(slug: str, display: str) -> list[dict]:
             pct   = _extract_pct(title)
             flat  = _extract_flat(title)
             coupons.append({
-                "title"         : title[:120],
+                "title"         : _clean_title(title),
                 "code"          : raw_code.upper() if valid else "",
                 "has_code"      : valid,
                 "discount_value": pct if pct > 0 else flat,
@@ -1096,7 +1096,7 @@ def scrape_couponraja(slug: str, display: str) -> list[dict]:
                 pct   = _extract_pct(title)
                 flat  = _extract_flat(title)
                 coupons.append({
-                    "title"         : title[:120],
+                    "title"         : _clean_title(title),
                     "code"          : raw_code.upper() if valid else "",
                     "has_code"      : valid,
                     "discount_value": pct if pct > 0 else flat,
@@ -1266,7 +1266,7 @@ def scrape_savee(slug: str, display: str) -> list[dict]:
         pct   = _extract_pct(title)
         flat  = _extract_flat(title)
         coupons.append({
-            "title"         : title[:120],
+            "title"         : _clean_title(title),
             "code"          : raw_code.upper() if valid else "",
             "has_code"      : valid,
             "discount_value": pct if pct > 0 else flat,
@@ -1321,7 +1321,7 @@ def scrape_couponbazaar(slug: str, display: str) -> list[dict]:
                         valid = _is_valid_code(code)
                         pct, flat = _extract_pct(title), _extract_flat(title)
                         coupons.append({
-                            "title": title[:120], "code": code.upper() if valid else "",
+                            "title": _clean_title(title), "code": code.upper() if valid else "",
                             "has_code": valid, "discount_value": pct if pct > 0 else flat,
                             "discount_type": "Percentage" if pct > 0 else ("Flat Amount" if flat > 0 else "Deal"),
                             "scope": _detect_scope(title), "source": "CouponBazaar",
@@ -1347,7 +1347,7 @@ def scrape_couponbazaar(slug: str, display: str) -> list[dict]:
                 valid = _is_valid_code(raw_code)
                 pct, flat = _extract_pct(title), _extract_flat(title)
                 coupons.append({
-                    "title": title[:120], "code": raw_code.upper() if valid else "",
+                    "title": _clean_title(title), "code": raw_code.upper() if valid else "",
                     "has_code": valid, "discount_value": pct if pct > 0 else flat,
                     "discount_type": "Percentage" if pct > 0 else ("Flat Amount" if flat > 0 else "Deal"),
                     "scope": _detect_scope(title), "source": "CouponBazaar",
@@ -1381,7 +1381,7 @@ def scrape_magicpin(slug: str, display: str) -> list[dict]:
             if kw not in title.lower() and slug.split("-")[0] not in title.lower():
                 continue
             coupons.append({
-                "title": title[:120], "code": code.upper() if valid else "",
+                "title": _clean_title(title), "code": code.upper() if valid else "",
                 "has_code": valid, "discount_value": pct if pct > 0 else flat,
                 "discount_type": "Percentage" if pct > 0 else ("Flat Amount" if flat > 0 else "Deal"),
                 "scope": _detect_scope(title), "source": "MagicPin",
@@ -1502,6 +1502,30 @@ def verify_coupon_code(code: str, store_slug: str) -> dict:
     }
     _VERIFY_CACHE[cache_key] = result
     return result
+
+
+def _clean_title(text: str) -> str:
+    """Removes common scraping junk from coupon titles."""
+    if not text: return ""
+    # Remove common UI text artifacts
+    junk = [
+        r"Show\s*Code", r"Show\s*Details", r"Verified", r"Redeem", r"Copy\s*Code", 
+        r"Use\s*Code", r"Click\s*to", r"Reveal", r"Expired", r"Upto", r"Up\s*to",
+        r"\d+\s*times\s*used", r"JUST\s*IN", r"EXCLUSIVE"
+    ]
+    for pattern in junk:
+        text = re.sub(pattern, "", text, flags=re.I)
+    
+    # Remove trailing/leading junk punctuation
+    text = text.strip(" :-|")
+    
+    # Remove excessive spaces
+    text = re.sub(r"\s+", " ", text).strip()
+    
+    # Trim from the end if it contains "Show Details" or similar leftover
+    text = re.sub(r"\s+Show.*$", "", text, flags=re.I)
+    
+    return text[:120]
 
 
 # ══════════════════════════════════════════════════════════════
@@ -1769,7 +1793,13 @@ def find_best_coupon(store: str, coupons: list) -> str:
         f"Which single coupon gives me the best real savings? "
         f"Tell me the CODE to use and why in 2-3 sentences."
     )
-    return ask_ai(prompt)
+    reply = ask_ai(prompt)
+    if not reply and real_coupons:
+        best = real_coupons[0]
+        code = best.get("code")
+        title = best.get("title")
+        reply = f"I recommend using code **{code}** for '{title}'. This verified deal currently has our highest reliability score ({best.get('ai_score', 0)}%) and is the most likely to work for your purchase today."
+    return reply
 
 
 # ══════════════════════════════════════════════════════════════
