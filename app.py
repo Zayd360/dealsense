@@ -83,39 +83,48 @@ def api_ask_ai():
 @app.route("/api/chat", methods=["POST"])
 def api_chat():
     """
-    Conversational AI endpoint for the chatbot widget.
-    Body: { "message": str, "context": { "store": str, "coupons": list } }
-    Returns: { "reply": str, "has_key": bool }
+    Conversational AI Shopping Assistant.
     """
     import os
     data    = request.get_json(force=True)
     message = (data.get("message") or "").strip()
+    history = data.get("history") or []
     ctx     = data.get("context") or {}
+    
     if not message:
         return jsonify({"error": "message is required"}), 400
 
     store   = ctx.get("store", "")
     coupons = ctx.get("coupons") or []
 
-    # Build a context-aware system prompt
     system = (
-        "You are DealSense AI, a friendly and knowledgeable coupon assistant. "
-        "You help users save money by giving concise, practical advice about deals, "
-        "coupon codes, and shopping strategies. "
-        "Be conversational, helpful and keep answers under 3 sentences. "
-        "If asked about a specific store's coupons you already have context about, use it. "
-        "Never make up coupon codes."
+        "You are DealSense AI, an elite AI Shopping Assistant. "
+        "Your goal is to help users find the best deals, compare stores, and give expert shopping advice. "
+        "1. Understand natural language shopping intent (e.g., 'cheapest protein'). "
+        "2. Recommend specific stores based on their reputation and current deals. "
+        "3. Explain savings clearly. If you recommend a specific store or deal, feel free to provide a direct URL link. "
+        "4. Be conversational, professional, and helpful. "
+        "5. Keep responses under 4 sentences. "
+        "Never make up coupon codes. If you don't have a code, provide the official store link (e.g. https://amazon.in) and a general tip."
     )
+    
     if store and coupons:
-        top = coupons[:5]
-        lines = [f"- CODE: {c.get('code','N/A')} | {c.get('title','')[:60]} | {c.get('discount_type','')} {c.get('discount_value','')}{'%' if c.get('discount_type')=='Percentage' else ''}" for c in top]
-        ctx_block = f"\n\nCurrent store: {store}\nTop coupons available:\n" + "\n".join(lines)
-        system += ctx_block
+        top = coupons[:3]
+        lines = [f"- {c.get('code','N/A')}: {c.get('title','')[:50]}" for c in top]
+        system += f"\n\nActive Context: User is at {store}. Available verified codes:\n" + "\n".join(lines)
 
-    full_prompt = f"[System]\n{system}\n\n[User]\n{message}"
+    # Format history
+    prompt_parts = [f"[System]\n{system}"]
+    for h in history[-8:]:
+        role = "User" if h['role'] == 'user' else "Assistant"
+        prompt_parts.append(f"[{role}]\n{h['content']}")
+    prompt_parts.append(f"[User]\n{message}")
+    
+    full_prompt = "\n\n".join(prompt_parts)
     reply = ask_ai(full_prompt)
+    
     if not reply:
-        reply = "I'm having trouble connecting right now. Please try again in a moment!"
+        reply = "The digital mall is a bit noisy right now. Can you try saying that again?"
 
     has_key = bool(os.environ.get("OPENROUTER_API_KEY", "").strip())
     return jsonify({"reply": reply, "has_key": has_key})

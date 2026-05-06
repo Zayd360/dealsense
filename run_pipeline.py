@@ -8,6 +8,9 @@ import sys
 import time
 import os
 
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+
 STEPS = [
     ("1_data_collection.py",   "Data Collection (5,000 coupon records)"),
     ("2_feature_engineering.py","Feature Engineering (head/describe/info/isnull/encoding/scaling)"),

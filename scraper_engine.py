@@ -1659,17 +1659,12 @@ def _heuristic(c: dict, dv: float, sav: float) -> float:
 # ══════════════════════════════════════════════════════════════
 
 _OPENROUTER_BASE  = "https://openrouter.ai/api/v1/chat/completions"
-_OPENROUTER_MODEL = "meta-llama/llama-3.3-70b-instruct:free"  # primary model
+_OPENROUTER_MODEL = "openrouter/free"
 
-# Fallback chain — all verified free models on OpenRouter.
-# If the primary is rate-limited, we try these in order.
 _OPENROUTER_FALLBACKS = [
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "google/gemma-3-27b-it:free",
-    "google/gemma-3-12b-it:free",
-    "qwen/qwen3-next-80b-a3b-instruct:free",
-    "meta-llama/llama-3.2-3b-instruct:free",
-    "nousresearch/hermes-3-llama-3.1-405b:free",
+    "openrouter/free",
+    "google/gemma-4-26b-a4b-it:free",
+    "meta-llama/llama-3.3-70b-instruct:free"
 ]
 
 

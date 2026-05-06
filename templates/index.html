@@ -1989,6 +1989,72 @@
       .chat-panel { width: calc(100vw - 32px); right: 16px; bottom: 90px; }
       .chat-fab { right: 16px; bottom: 16px; }
     }
+
+    /* ══════════════════════════════════════
+       FUTURISTIC AI ASSISTANT UPGRADE
+    ══════════════════════════════════════ */
+    .chat-fab {
+      position: fixed; right: 32px; bottom: 32px;
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      box-shadow: 0 8px 32px rgba(108, 99, 255, 0.4);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 2000; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .chat-fab:hover { transform: scale(1.1) rotate(5deg); }
+    .chat-fab svg { width: 32px; height: 32px; color: white; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+    
+    .chat-panel {
+      position: fixed; right: 32px; bottom: 110px;
+      width: 380px; height: 600px; max-height: calc(100vh - 140px);
+      background: rgba(13, 18, 33, 0.95); backdrop-filter: blur(20px);
+      border: 1px solid rgba(108, 99, 255, 0.3); border-radius: 28px;
+      display: flex; flex-direction: column; overflow: hidden;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+      z-index: 2000; opacity: 0; transform: translateY(20px) scale(0.95);
+      pointer-events: none; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .chat-panel.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
+
+    .chat-header {
+      padding: 20px 24px; background: linear-gradient(to right, rgba(108, 99, 255, 0.1), transparent);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .chat-bot-info { display: flex; align-items: center; gap: 12px; }
+    .chat-bot-avatar {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, #7c6dfa, #48e5c2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .chat-bot-avatar svg { width: 24px; height: 24px; color: white; }
+    .chat-status { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #48e5c2; font-weight: 600; margin-top: 2px; }
+    .chat-status .dot { width: 8px; height: 8px; background: #48e5c2; border-radius: 50%; box-shadow: 0 0 10px #48e5c2; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+
+    .chat-messages { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 16px; scroll-behavior: smooth; }
+    .chat-msg { max-width: 85%; padding: 12px 18px; border-radius: 20px; font-size: 0.92rem; line-height: 1.5; position: relative; }
+    .chat-msg.user { align-self: flex-end; background: linear-gradient(135deg, var(--accent1), #6c63ff); color: white; border-bottom-right-radius: 4px; }
+    .chat-msg.ai { align-self: flex-start; background: rgba(255,255,255,0.05); color: var(--text); border-bottom-left-radius: 4px; border: 1px solid rgba(255,255,255,0.1); }
+    
+    .chat-suggestions { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 24px; }
+    .suggest-chip {
+      padding: 8px 14px; background: rgba(108, 99, 255, 0.1); border: 1px solid rgba(108, 99, 255, 0.2);
+      border-radius: 12px; font-size: 0.8rem; color: var(--accent2); cursor: pointer; transition: all 0.2s;
+    }
+    .suggest-chip:hover { background: rgba(108, 99, 255, 0.2); transform: translateY(-1px); }
+
+    .typing-dots { display: flex; gap: 4px; padding: 4px 8px; }
+    .typing-dots span { width: 6px; height: 6px; background: var(--muted); border-radius: 50%; animation: blink 1.4s infinite both; }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes blink { 0%, 100% { opacity: 0.2; } 20% { opacity: 1; } }
+
+    .mic-btn {
+      background: none; border: none; color: var(--muted); cursor: pointer; padding: 8px; transition: color 0.2s;
+    }
+    .mic-btn:hover { color: var(--accent2); }
   </style>
 </head>
 
@@ -2288,52 +2354,46 @@
   </footer>
 
   <!-- ══ AI CHATBOT WIDGET ══ -->
-  <div id="chatBtn" class="chat-fab" onclick="toggleChat()" title="Ask DealSense AI">
-    <div class="chat-fab-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
-        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
-      </svg>
-    </div>
-    <div class="chat-fab-ping"></div>
+  <!-- AI FLOATING ASSISTANT -->
+  <div class="chat-fab" id="chatFab" onclick="toggleChat()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
   </div>
 
   <div id="chatPanel" class="chat-panel">
     <div class="chat-header">
-      <div class="chat-header-left">
-        <div class="chat-avatar">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
-            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
-          </svg>
+      <div class="chat-bot-info">
+        <div class="chat-bot-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
         </div>
         <div>
-          <div class="chat-name">DealSense AI</div>
-          <div class="chat-status"><span class="chat-dot"></span>Online</div>
+          <div style="font-weight:700; font-size:1rem; color:white;">DealSense AI</div>
+          <div class="chat-status"><div class="dot"></div>Online Assistant</div>
         </div>
       </div>
-      <button class="chat-close" onclick="toggleChat()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      <button onclick="toggleChat()" style="background:none; border:none; color:rgba(255,255,255,0.4); cursor:pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
 
     <div class="chat-messages" id="chatMessages">
       <div class="chat-msg ai">
-        <div class="chat-bubble">Hey! 👋 I'm DealSense AI. Search for any store and I'll help you find the best coupon, explain a deal, or give savings tips. What are you shopping for today?</div>
-        <div class="chat-time">Just now</div>
+        <div class="chat-bubble">Hey! 👋 I'm your AI Shopping Assistant. I can help you find deals, compare stores, or explain how much you'll save. What's on your list today?</div>
       </div>
     </div>
 
     <div class="chat-suggestions" id="chatSuggestions">
-      <button onclick="sendSuggestion('What is the best coupon right now?')">Best coupon?</button>
-      <button onclick="sendSuggestion('How do I save the most?')">Save the most?</button>
-      <button onclick="sendSuggestion('Any cashback deals?')">Cashback?</button>
+      <div class="suggest-chip" onclick="sendSuggestion('Best gaming laptop coupons')">💻 Gaming laptops</div>
+      <div class="suggest-chip" onclick="sendSuggestion('Cheapest protein supplements')">🥛 Protein deals</div>
+      <div class="suggest-chip" onclick="sendSuggestion('Highest cashback deals')">💰 Top Cashback</div>
     </div>
 
-    <div class="chat-input-row">
-      <input type="text" id="chatInput" class="chat-input" placeholder="Ask anything about deals…" onkeydown="if(event.key==='Enter')sendChat()" />
-      <button class="chat-send" onclick="sendChat()">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    <div class="chat-input-area" style="padding:16px 20px; display:flex; align-items:center; gap:10px; border-top:1px solid rgba(255,255,255,0.05);">
+      <button class="mic-btn" id="micBtn" onclick="startVoiceInput()" title="Voice Input">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </button>
+      <input type="text" id="chatInput" class="chat-input" placeholder="Ask anything about deals…" onkeydown="if(event.key==='Enter')sendChat()" style="flex:1; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:10px 14px; color:white; outline:none;" />
+      <button class="chat-send" onclick="sendChat()" style="width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg, #7c6dfa, #6c63ff); border:none; color:white; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       </button>
     </div>
   </div>
@@ -2430,25 +2490,32 @@
       }, 350);
     }
 
-    // ── AI CHATBOT ────────────────────────────────────────────────
+    // ── AI SHOPPING ASSISTANT ────────────────────────────────────
     let chatOpen = false;
+    let chatHistory = [];
     let chatContext = { store: '', coupons: [] };
 
     function toggleChat() {
       chatOpen = !chatOpen;
-      document.getElementById('chatPanel').classList.toggle('open', chatOpen);
+      const panel = document.getElementById('chatPanel');
+      panel.classList.toggle('open', chatOpen);
+      if (chatOpen) document.getElementById('chatInput').focus();
+    }
+
+    function linkify(text) {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      return text.replace(urlRegex, (url) => {
+        return `<a href="${url}" target="_blank" style="color:#48e5c2; text-decoration:underline; font-weight:600;">${url}</a>`;
+      });
     }
 
     function addMsg(text, role) {
       const msgs = document.getElementById('chatMessages');
-      const now = new Date();
-      const time = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
       const div = document.createElement('div');
-      div.className = 'chat-msg ' + role;
-      div.innerHTML = `<div class="chat-bubble">${esc(text)}</div><div class="chat-time">${time}</div>`;
+      div.className = `chat-msg ${role}`;
+      div.innerHTML = `<div class="chat-bubble">${linkify(text)}</div>`;
       msgs.appendChild(div);
       msgs.scrollTop = msgs.scrollHeight;
-      return div;
     }
 
     function addTyping() {
@@ -2470,28 +2537,58 @@
       const inp = document.getElementById('chatInput');
       const msg = inp.value.trim();
       if (!msg) return;
+      
       inp.value = '';
       document.getElementById('chatSuggestions').style.display = 'none';
-      addMsg(msg, 'user');
+      
+      const esc = (t) => {
+        const d = document.createElement('div');
+        d.textContent = t;
+        return d.innerHTML;
+      };
+
+      addMsg(esc(msg), 'user');
+      chatHistory.push({ role: 'user', content: msg });
       addTyping();
+      
       try {
         const res = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: msg, context: chatContext })
+          body: JSON.stringify({ message: msg, context: chatContext, history: chatHistory })
         });
         const data = await res.json();
         removeTyping();
-        addMsg(data.reply || "Sorry, I couldn't get a response right now.", 'ai');
+        
+        const reply = data.reply || "Connection is a bit shaky. Try again?";
+        addMsg(reply, 'ai');
+        chatHistory.push({ role: 'ai', content: reply });
       } catch(e) {
         removeTyping();
-        addMsg("Connection error. Please try again!", 'ai');
+        addMsg("Connection error. The digital mall is a bit crowded right now!", 'ai');
       }
     }
 
     function sendSuggestion(text) {
       document.getElementById('chatInput').value = text;
       sendChat();
+    }
+
+    function startVoiceInput() {
+      const btn = document.getElementById('micBtn');
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) { alert("Voice input not supported."); return; }
+      
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'en-US';
+      recognition.start();
+
+      btn.style.color = '#48e5c2';
+      recognition.onresult = (e) => {
+        document.getElementById('chatInput').value = e.results[0][0].transcript;
+        sendChat();
+      };
+      recognition.onend = () => { btn.style.color = ''; };
     }
 
     // ── SEARCH ────────────────────────────────────────────────────
